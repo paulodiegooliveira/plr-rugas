@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body,
+center,
+dd,
+del,
+div,
+dt,
+em,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+iframe,
+img,
+p,
+q,
+s,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tr,
+u {
+  margin: -1px 0 0 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: Roboto, sans-serif;
+}
+
+.u {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #eee;
+  overflow-x: hidden;
+  line-height: 1;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+
+  /* background-image: url(https://wallpaperaccess.com/full/1562637.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+}
+
+iframe,
+img,
+svg {
+  max-width: 100%;
+}
+
+h1,
+h1 b,
+h1 span,
+h2,
+h2 b,
+h2 span,
+h3,
+h3 b,
+h3 span {
+  font-family: Poppins, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+}
+
+a.btn {
+  font-family: Montserrat, sans-serif;
+}
+
+/* SHOTCUT */
+.text-center {
+  text-align: center;
+}
+.radius {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.color-blue {
+  color: #0067b0;
+}
+
+/* FEX */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-large,
+.flex-small {
+  flex-basis: 100%;
+}
+
+.flex-large:last-child,
+.flex-small:last-child {
+  margin-right: 0 !important;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-auto-rows-1 {
+  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: 100px;
+}
+
+.gap {
+  gap: 20px;
+}
+
+/* SECTION */
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px; */
+}
+
+/* CONTAINER */
+.container {
+  /* background: #eeeeeed6; */
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  background-color: #781c68;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-family: inherit;
+  padding: 1rem;
+  margin: 0 auto;
+  border: 4px solid #ffcf4b;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button:hover {
+  background-color: #bd2ea5;
+}
+
+button:focus {
+  outline: none;
+  background-color: #b91a9e;
+}
+
+div#pressel h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  line-height: 1.5;
+}
+
+div#pressel p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h2#timer {
+  width: 20px;
+  height: 20px;
+  background: #bd2ea5;
+  border-radius: 100%;
+  padding: 1rem;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffa0ef;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  div#pressel h1 {
+    font-size: 1.5rem;
+  }
+
+  div#pressel p {
+    font-size: 1.3rem;
+  }
+
+  button {
+    width: 90%;
+    font-size: 2.2rem;
+  }
+}
