@@ -229,6 +229,28 @@ h2#timer {
   font-size: 1rem;
 }
 
+.footer-BepGow1342175-element {
+  text-align: center;
+  font-size: 1.2vw;
+  color: #676666;
+}
+
+.division-ALBqaI1166235__wrapper {
+  background: #dddddd;
+  display: flow-root;
+}
+
+#terms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#terms a {
+  color: #676666;
+}
+
 @media (max-width: 600px) {
   div#pressel h1 {
     font-size: 1.5rem;
