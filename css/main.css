@@ -887,32 +887,6 @@ em span.sm {
 }
 
 /* *********************************** */
-.headline-HkBGbz0384083-element h1 {
-  font-size: 1.98vw;
-  text-align: center;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  color: #f1faee;
-  line-height: 1.1;
-  font-weight: 600;
-}
-
-@media (max-width: 1200px) {
-  .headline-HkBGbz0384083-element h1 {
-    font-size: 3.3vw;
-    padding-top: 1vh;
-    padding-bottom: 1.5vh;
-  }
-}
-
-@media (max-width: 640px) {
-  .headline-HkBGbz0384083-element h1 {
-    font-size: 6.5vw;
-    text-align: center;
-  }
-}
-
-/* *********************************** */
 .description-IyJwsP0415000-element h3 {
   font-size: 0.99vw;
   text-align: center;

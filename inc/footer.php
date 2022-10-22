@@ -11,10 +11,10 @@
         <br>
         
         <picture>
-          <img src="./img/h3.png" width="300">
+          <img src="<?= BASE; ?>/img/h3.png" width="300">
         </picture>
 
-        <div style="display:flex;align-items:center;justify-content:center;margin-top:15px;">
+        <div id="terms">
           <a id="t" style="margin-right:12px" href="#"> Termos de Uso </a>
           <span style="margin-right:12px">·</span>
           <a id="p" href="#"> Privacidade </a>

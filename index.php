@@ -7,7 +7,6 @@ $getURL = strip_tags(trim(filter_input(INPUT_GET, 'url', FILTER_DEFAULT)));
 $setURL = (empty($getURL) ? 'index' : $getURL);
 $URL = explode('/', $setURL);
 $SEO = new Seo($setURL);
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
@@ -35,20 +34,17 @@ $SEO = new Seo($setURL);
     <meta property="og:locale" content="pt_BR" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
     <meta name="facebook-domain-verification" content="xq2w3j2mh2d85x370de1oujmlqp30b" />
     
     <title><?= $SEO->getTitle(); ?></title>
 
     <?php include_once ('./components/vturn-header.php'); ?>
-        
-        
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="<?= $SEO->cssRoute(); ?>">
-      
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">    
 
     <!-- Google tag (gtag.js) -->
@@ -88,7 +84,11 @@ $SEO = new Seo($setURL);
     <?php endif; ?>
     <!-- End Meta Pixel Code -->
   </head>
-  <body> 
+  <body>
+    <form name="formBaseUrl">
+        <input class="inputHidden" type="hidden" name="base" value="<?= BASE; ?>">
+    </form>
+    
     <?php      
       // REDIRECT PUBLIC TO MAINTENANCE
       if (ADMIN_MAINTENANCE && (empty($_SESSION['userLogin']['user_level']) || $_SESSION['userLogin']['user_level'] < 6)) :
@@ -103,8 +103,8 @@ $SEO = new Seo($setURL);
           endif;
 
           // HEADER
-          if (file_exists(REQUIRE_PATH . "/inc/header.php")) :
-              require REQUIRE_PATH . "/inc/header.php";
+          if (file_exists("./inc/header.php")) :
+              require "./inc/header.php";
           else :
               trigger_error('Crie um arquivo /inc/header.php na pasta do tema!');
           endif;
@@ -142,8 +142,9 @@ $SEO = new Seo($setURL);
                 require $URL[0] . ".php";
             endif;
 
-          elseif (file_exists(REQUIRE_PATH . '/' . $URL[0] . '/' . $URL[1] . '.php')) :            
-              require REQUIRE_PATH . '/' . $URL[0] . '/' . $URL[1] . '.php';              
+          elseif (file_exists(REQUIRE_PATH . '/' . $URL[0] . '/' . $URL[1] . '.php')) :              
+              require REQUIRE_PATH . '/' . $URL[0] . '/' . $URL[1] . '.php';
+
           else :
               if (file_exists(REQUIRE_PATH . "/404.php")) :
                   require REQUIRE_PATH . '/404.php';
@@ -153,8 +154,8 @@ $SEO = new Seo($setURL);
           endif;
 
           // FOOTER
-          if (file_exists(REQUIRE_PATH . "/inc/footer.php")) :
-              require REQUIRE_PATH . "/inc/footer.php";
+          if (file_exists("./inc/footer.php")) :
+              require "./inc/footer.php";
           else :
               trigger_error('Crie um arquivo /inc/footer.php na pasta do tema!');
           endif;

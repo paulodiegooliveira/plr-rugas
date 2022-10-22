@@ -73,14 +73,23 @@ class Seo {
             $this->Css = BASE .'/css/main.css';
             $this->Js = BASE .'/js/app.js';
             
-            elseif ($this->File == 'presell'):
+        elseif ($this->File == 'presell'):
             //PRESSEL
             $this->Schema = 'WebSite';
             $this->Title = SITE_NAME . " - " . SITE_TITLE;
-            $this->Description = "sasds";
+            $this->Description = "Página destinada a autoestima da mulher";
             $this->Image = BASE . "/img/Logo.png";
-            $this->Css = BASE .'/css/'. $this->File . ".css";
-            $this->Js = BASE .'/js/'. $this->File . ".js";
+            $this->Css = BASE ."/css/". $this->File . ".css";
+            $this->Js = BASE ."/js/". $this->File . '.js';
+
+        elseif ($this->File == 'quiz'):
+            //PRESSEL
+            $this->Schema = 'WebSite';
+            $this->Title =  "Quiz - " . SITE_TITLE;
+            $this->Description = "Página destinada a autoestima da mulher";
+            $this->Image = BASE . "/img/Logo.png";
+            $this->Css = BASE ."/css/". $this->File . ".css";
+            $this->Js = BASE .'/js/'. $this->File . '.js';
         else:
             //404
             $this->set404();
