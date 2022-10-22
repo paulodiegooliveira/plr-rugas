@@ -18,3 +18,9 @@ define('SITE_NAME', 'Cabelo Rapunzel'); // Nome do site | Vai aparecer na aba do
 define('SITE_TITLE', 'Protocolo Cabelo Rapunzel'); // Título do site
 define('SITE_DESC', 'Protocolo Cabelo Rapunzel'); // Descrição do site
 
+// IMAGES
+define('IMAGE_LOGO', 'logo.png'); // Logo do site
+define('IMAGE_FAVICON', 'favicon.png'); // Imagem que fica na aba do navegador
+define('IMAGE_BACKGROUND', 'bg.jpeg'); // Imagem de fundo | 0 default
+
+

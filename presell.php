@@ -10,9 +10,15 @@
       continuar para ver mais detalhes:
     </p>
     
-    <a href="<?= LINK_REDIRECT; ?>">
-      <button class="radius">CONTINUAR <h2 id="timer"></h2></button>
-    </a>
+    <?php if ($URL[1]): ?>
+      <a href="<?= LINK_REDIRECT; ?>">
+        <button class="radius">CONTINUAR <h2 id="timer"></h2></button>
+      </a>
+    <?php else: ?>
+      <a href="<?= LINK_REDIRECT; ?>">
+        <button class="radius">CONTINUAR</button>
+      </a>
+    <?php endif; ?>
     
   </div>
 </section>
