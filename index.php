@@ -40,14 +40,7 @@ $SEO = new Seo($setURL);
     
     <title><?= $SEO->getTitle(); ?></title>
 
-    <link rel="preload" href="https://scripts.converteai.net/ac925224-f02b-475e-bfb9-bc4078e479fb/players/634df5547783ee000ab0b823/player.js" as="script">
-    <link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
-    <link rel="preload" href="https://images.converteai.net/ac925224-f02b-475e-bfb9-bc4078e479fb/players/634df5547783ee000ab0b823/thumbnail.jpg" as="image">
-    <link rel="preload" href="https://cdn.converteai.net/ac925224-f02b-475e-bfb9-bc4078e479fb/634df470f5fc1e000ba57887/playlist.m3u8" as="fetch">
-    <link rel="dns-prefetch" href="https://cdn.converteai.net">
-    <link rel="dns-prefetch" href="https://scripts.converteai.net">
-    <link rel="dns-prefetch" href="https://images.converteai.net">
-    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+    <?php include_once ('./components/vturn-header.php'); ?>
         
         
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,36 +52,40 @@ $SEO = new Seo($setURL);
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">    
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYCP4MGWW3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <?php if($_SERVER['HTTP_HOST'] != 'localhost'): ?>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYCP4MGWW3"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'G-RYCP4MGWW3');
-    </script>
+        gtag('config', 'G-RYCP4MGWW3');
+        </script>
+    <?php endif; ?>
 
     <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '<?= PIXEL_FACEBOOK; ?>');
-    fbq('track', 'PageView');
-    
-    <?php if($setURL == 'presell'): ?>
-        fbq('trackCustom', '<?= TRACK_CUSTOM_FB; ?>'); 
+    <?php if($_SERVER['HTTP_HOST'] != 'localhost'): ?>
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '<?= PIXEL_FACEBOOK; ?>');
+        fbq('track', 'PageView');
+        
+        <?php if($setURL == 'presell'): ?>
+            fbq('trackCustom', '<?= TRACK_CUSTOM_FB; ?>'); 
+        <?php endif; ?>
+        
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=<?= PIXEL_FACEBOOK; ?>&ev=PageView&noscript=1"
+        /></noscript>
     <?php endif; ?>
-    
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=<?= PIXEL_FACEBOOK; ?>&ev=PageView&noscript=1"
-    /></noscript>
     <!-- End Meta Pixel Code -->
   </head>
   <body> 
@@ -106,10 +103,10 @@ $SEO = new Seo($setURL);
           endif;
 
           // HEADER
-          if (file_exists(REQUIRE_PATH . "/components/header.php")) :
-              require REQUIRE_PATH . "/components/header.php";
+          if (file_exists(REQUIRE_PATH . "/inc/header.php")) :
+              require REQUIRE_PATH . "/inc/header.php";
           else :
-              trigger_error('Crie um arquivo /components/header.php na pasta do tema!');
+              trigger_error('Crie um arquivo /inc/header.php na pasta do tema!');
           endif;
 
           // CONTENT
@@ -156,10 +153,10 @@ $SEO = new Seo($setURL);
           endif;
 
           // FOOTER
-          if (file_exists(REQUIRE_PATH . "/components/footer.php")) :
-              require REQUIRE_PATH . "/components/footer.php";
+          if (file_exists(REQUIRE_PATH . "/inc/footer.php")) :
+              require REQUIRE_PATH . "/inc/footer.php";
           else :
-              trigger_error('Crie um arquivo /components/footer.php na pasta do tema!');
+              trigger_error('Crie um arquivo /inc/footer.php na pasta do tema!');
           endif;
       endif;
     ?>    

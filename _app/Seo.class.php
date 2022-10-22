@@ -71,7 +71,7 @@ class Seo {
             $this->Description = "Método simples, seguro e rápido para ter um cabelo liso, sem produtos caros e sem salão de beleza.";
             $this->Image = BASE . "/img/Logo.png";
             $this->Css = BASE .'/css/main.css';
-            $this->Js = "app.js";
+            $this->Js = BASE .'/js/app.js';
             
             elseif ($this->File == 'presell'):
             //PRESSEL
@@ -92,6 +92,7 @@ class Seo {
         $this->Title = "Oppsss, nada encontrado! - " . SITE_NAME;
         $this->Description = SITE_DESC;
         $this->Image = INCLUDE_PATH . '/img/garantia.jpeg';
+        $this->Css = BASE .'/css/main.css';
     }
 
 }

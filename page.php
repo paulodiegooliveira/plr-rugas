@@ -45,23 +45,10 @@
       </div>
     </div>      
 
+    <!-- VIDEO | R$ 27 -->    
     <!-- VIDEO | R$ 97 -->
+    <?php include_once('components/vturb-video.php')?>
     
-
-    <!-- VIDEO | R$ 27 -->
-    <div id="vid_634df5547783ee000ab0b823" 
-          style="position:relative;width:100%;padding: 56.25% 0 0;">
-
-      <img id="thumb_634df5547783ee000ab0b823" 
-            src="https://images.converteai.net/ac925224-f02b-475e-bfb9-bc4078e479fb/players/634df5547783ee000ab0b823/thumbnail.jpg" 
-            style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;" >
-
-      <div id="backdrop_634df5547783ee000ab0b823" 
-            style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div>
-    </div>
-
-    <script type="text/javascript" id="scr_634df5547783ee000ab0b823"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/ac925224-f02b-475e-bfb9-bc4078e479fb/players/634df5547783ee000ab0b823/player.js",s.async=!0,document.head.appendChild(s);</script>
-
     <!-- Pessoas ao vivo -->
     <div class="description-YWWyRI0392116">
       <div class="description-YWWyRI0392116-element ">
@@ -72,8 +59,8 @@
     </div>
 
     <!-- Botão -->
-    <div class="button-IWiNKI0399434 luiptx4767087">          
-      <a href="<?=$linkPagamento;?>" target="_blank" class="btn button-IWiNKI0399434-element "> COMPRAR AGORA </a>
+    <div class="button-IWiNKI0399434 luiptx4767087">
+      <a href="<?= LINK_KIWIFY ;?>" target="_blank" class="btn button-IWiNKI0399434-element "> COMPRAR AGORA </a>
     </div>
 
     <!-- fbComments  -->
@@ -307,43 +294,8 @@
     </div>
 
     <!-- Botão -->
-    <div class="button-ldARWA0528648 hidden">          
-      <a href="<?=$linkPagamento; ?>" class="btn button-ldARWA0528648-element pulsing"> COMPRAR AGORA </a>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<div class="division-ALBqaI1166235__wrapper">      
-  <div id="division-ALBqaI1166235" class="onivMo4761671">
-    <div class="footer-BepGow1342175"><br>
-      <footer class="footer-BepGow1342175-element">
-        <p>
-          <strong>Copyright 2022 – Protocolo Cabelo Rapunzel ®</strong>
-        </p>
-        <p style="margin-top:4px;">Todos os Direitos Reservados</p>
-        
-        <br>
-        
-        <picture>
-          <img src="./img/h3.png" width="300">
-        </picture>
-
-        <div style="display:flex;align-items:center;justify-content:center;margin-top:15px;">
-          <a id="t" style="margin-right:12px" href="#"> Termos de Uso </a>
-          <span style="margin-right:12px">·</span>
-          <a id="p" href="#"> Privacidade </a>
-        </div>
-
-        <p style="margin-top:24px;"></p>
-
-        <script>
-          const pr = window.location.href + "/privacidade",
-            te = window.location.href + "/termos";
-          document.getElementById("p").setAttribute("href", pr), document.getElementById("t").setAttribute("href", te);
-        </script>
-
-      </footer>
+    <div class="button-ldARWA0528648 hidden">
+      <a href="<?= LINK_KIWIFY; ?>" class="btn button-ldARWA0528648-element pulsing"> COMPRAR AGORA </a>
     </div>
   </div>
 </div>
